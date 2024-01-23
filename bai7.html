@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table style="border: 1px solid black;">
+        <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+      </table>      
+      <button id="btnAdd">Them hang</button>   
+</body>
+<script>
+const btnAdd = document.getElementById("btnAdd");
+btnAdd.addEventListener("click", () => {
+  let table = document.querySelector("table");
+  let lastRow = table.rows[table.rows.length - 1];
+  let newRow = table.insertRow(lastRow.rowIndex + 1);
+  for (let i = 0; i < lastRow.cells.length; i++) {
+    let cell = newRow.insertCell(i);
+    cell.innerHTML = "3";
+  }
+});
+
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tạo danh sách</title>
+</head>
+<body>
+  <input type="text" id="input">
+  <button id="submit">Thêm</button>
+  <ul id="list"></ul>
+</body>
+<script>
+let input = document.querySelector("#input");
+let submit = document.querySelector("#submit");
+let list = document.querySelector("#list");
+submit.addEventListener("click", () => {
+  let value = input.value;
+  if (value) {
+    const li = document.createElement("li");
+    li.textContent = value;
+    list.appendChild(li);
+    input.value = "";
+  }
+});
+
+</script>
+</html>

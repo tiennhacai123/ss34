@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Style</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 50px;
+        }
+
+        #displayText {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p id="displayText">Hello my friend</p>
+    <button onclick="changeStyle()">Change Style</button>
+</body>
+<script>
+    function changeStyle() {
+    var displayText = document.getElementById("displayText");
+    displayText.classList.toggle("highlight");
+}
+
+</script>
+</html>
